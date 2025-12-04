@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #111;
+    font-family: 'Courier New', Courier, monospace;
+    user-select: none;
+}
+
+#game-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+canvas {
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+#ui-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+#scoreboard {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    gap: 20px;
+    text-shadow: 2px 2px 0px #000;
+}
+
+.team-score {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#control-panel {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid #fff;
+    padding: 15px;
+    color: white;
+    pointer-events: auto;
+    width: 250px;
+}
+
+#control-panel h3 {
+    margin: 0 0 10px 0;
+    text-align: center;
+    border-bottom: 1px solid #555;
+    padding-bottom: 5px;
+}
+
+.control-group {
+    margin-bottom: 10px;
+}
+
+.control-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.control-group input {
+    width: 100%;
+}
+
+#btn-restart {
+    width: 100%;
+    background: #333;
+    color: white;
+    border: 2px solid #fff;
+    padding: 8px;
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#btn-restart:hover {
+    background: #555;
+}
+
+#btn-restart:active {
+    background: #222;
+}
+
+/* Health Bar Styles */
+.health-bar-container {
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    background: #000;
+    border: 1px solid #fff;
+    transform: translate(-50%, -20px);
+    display: none;
+}
+
+.health-fill {
+    height: 100%;
+    background: #0f0;
+    width: 100%;
+    transition: width 0.1s;
+}
